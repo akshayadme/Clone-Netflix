@@ -1,0 +1,567 @@
+:root {
+    --primary-color: #e50914;
+    --secondary-color: #db0510;
+    --background-color: #000;
+    --text-color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: var(--background-color);
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--text-color);
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+img {
+    width: 100%;
+}
+
+html {
+    font-size: 100%;
+}
+
+/* navbar start */
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+}
+
+nav .navbar {
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.navbar img {
+    width: 160px;
+}
+
+/* navbar end */
+
+
+/* hero section start */
+.showcase {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/landing.jpg");
+    background-size: cover;
+    background-position: center center;
+    border-bottom: 0.6rem solid #111;
+}
+
+.showcase::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100.1%;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0px 30px 250px #000,
+        inset 0px -30px 250px #000;
+}
+
+.showcase .content-text {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 3rem;
+}
+
+.showcase .content-text .title {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.content-text .title h1 {
+    max-width: 600px;
+    font-weight: 600;
+    font-size: 3.2rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.content-text .title h3 {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+}
+
+.content-text .title p {
+    color: var(--text-color);
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin: 0 0 1.2rem;
+}
+
+.text-button {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.text-button input {
+    padding: 1.1rem 0.5rem;
+    font-size: 1rem;
+    width: 450px;
+    height: 58px;
+    outline: none;
+    border: none;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.4rem 1.3rem;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    outline: none;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+    border-radius: 2px;
+}
+
+.btn-rounded {
+    border-radius: 3px;
+    padding: 0.5rem 1.075rem;
+}
+
+.btn-xl {
+    font-size: 0.5rem;
+    padding: 0.6rem 1.8rem;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    border-radius: 0px;
+}
+
+.btn-xl:hover {
+    background-color: #db0510;
+}
+
+/* hero section end */
+
+
+
+/* card section start */
+
+.column1,
+.column2,
+.column3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 0.6rem solid #111;
+    padding: 50px 5%;
+}
+
+.content-inside {
+    width: 40%;
+}
+
+.image-inside {
+    width: 45%;
+}
+
+.content-inside h1 {
+    font-size: 3rem;
+}
+
+.content-inside h3 {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    line-height: 2rem;
+}
+
+/* card section end */
+
+
+/* Question section start */
+.questions {
+    width: 100%;
+    border-bottom: 0.6rem solid #111;
+}
+
+.questions h1 {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+    font-size: 3rem;
+}
+
+.accordionButton {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1px auto 8px auto;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    background-color: #303030;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.5s;
+}
+
+.accordionButton::after {
+    content: '\002B';
+    font-size: 3rem;
+}
+
+.accordionButton--active {
+    background-color: #303030;
+}
+
+.accordionButton--active::after {
+    content: "\2715";
+    font-size: 2.2rem;
+}
+
+.accordion_text {
+    display: none;
+    width: 60%;
+    padding: 1rem 1.5rem;
+    margin: 1px auto 8px auto;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+    background-color: #303030;
+    transition: 0.5s;
+}
+
+.member {
+    text-align: center;
+    color: var(--text-color);
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin-top: 4rem;
+    margin-bottom: 20px;
+}
+
+.questions .text-button {
+    margin-bottom: 5rem;
+}
+
+/* question section end */
+
+
+/* footer section start */
+
+footer {
+    font-size: 0.8rem;
+    color: #757575;
+    padding: 5rem 14rem;
+    display: grid;
+}
+
+footer .top {
+    grid-column: 1/span 4;
+    margin-bottom: 1.5rem;
+}
+
+footer a {
+    color: #757575;
+}
+
+footer li {
+    padding: 10px 0;
+}
+
+.bottombtn select {
+    grid-column: 1/span 4;
+    border: 0.5px solid #757575;
+    background: #000;
+    color: #757575;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.footerLogo {
+    grid-column: 1/span 4;
+}
+
+/* footer section end */
+
+
+/* media queries for max 768px */
+@media only screen and (max-width:768px) {
+    nav .navbar {
+        padding: 10px 40px;
+    }
+
+    .navbar img {
+        width: 130px;
+    }
+
+    .showcase {
+        height: 70vh;
+    }
+
+    .showcase .content-text {
+        padding-top: 5rem;
+    }
+
+    .content-text .title h1 {
+        font-size: 3rem;
+    }
+    .content-text .title p {
+        max-width: 70%;
+        font-size: 22px;
+    }
+
+    .text-button {
+        flex-direction: column;
+    }
+
+    .text-button input {
+        width: 360px;
+        height: 58px;
+        width: 500px;
+        font-size: 0.9rem;
+    }
+
+    .text-button .btn-xl {
+        margin: 1rem 0;
+        font-size: 16px;
+        padding: 0.5rem 1rem;
+    }
+
+    .column1,
+    .column2,
+    .column3 {
+        flex-direction: column;
+    }
+
+    .content-inside {
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .image-inside {
+        width: 100%;
+    }
+
+    .column2 {
+        flex-direction: column-reverse;
+    }
+
+    .accordionButton {
+        width: 95%;
+    }
+
+    .accordion_text {
+        width: 95%;
+    }
+
+    footer {
+        padding: 70px 45px;
+    }
+}
+
+
+/* media qqueries for max 450px */
+@media only screen and (max-width:450px) {
+    nav .navbar{
+        padding: 10px 20px; 
+    }
+    .navbar img{
+        width: 110px;
+    }
+    .btn-rounded{
+        padding: 0.3rem 0.7rem;
+    }
+    .showcase {
+        height: 70vh;
+    }
+
+    .content-text .title h1 {
+        font-size: 2rem;
+    }
+
+    .content-text .title h3 {
+        font-size: 1.3rem;
+    }
+
+    .content-text .title p {
+        max-width: 90%;
+        font-size: 1.3rem;
+    }
+
+    .text-button {
+        flex-direction: column;
+    }
+
+    .text-button input {
+        height: 50px;
+        width: 350px;
+        font-size: 0.9rem;
+    }
+
+    .text-button .btn-xl {
+        margin: 1rem 0;
+        font-size: 16px;
+        padding: 0.5rem 1rem;
+    }
+
+    .column1,
+    .column2,
+    .column3 {
+        flex-direction: column;
+    }
+
+    .column2 {
+        flex-direction: column-reverse;
+    }
+
+    .content-inside h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .content-inside h3 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .image-inside {
+        width: 100%;
+        ;
+    }
+
+    .questions h1 {
+        font-size: 1.7rem;
+    }
+
+    .accordionButton {
+        font-size: 1.3rem;
+    }
+
+    .accordion_text {
+        font-size: 1.3rem;
+    }
+
+    footer {
+        padding: 3.5rem 1.7rem 2rem 1.7rem;
+        font-size: 1rem;
+    }
+
+    footer .top {
+        grid-column: 1/span 2;
+    }
+
+    .col1,
+    .col3 {
+        grid-column: 1/ 2;
+    }
+
+    .col2,
+    .col4 {
+        grid-column: 2/ 2;
+    }
+
+    .buttonbtn {
+        grid-column: 1/span 2;
+    }
+
+    .footerLogo {
+        grid-column: 1/span 2;
+    }
+
+}
+
+/* media queries for max 375px */
+@media only screen and (max-width:375px) {
+    .showcase{
+        height: 85vh;
+    }
+    .content-text .title h1 {
+        max-width: 80%;
+        font-size: 1.7rem;
+    }
+}
+
+/* media queries for max 350px */
+@media only screen and (max-width:350px) {
+    .showcase{
+        height: 90vh;
+    }
+    .content-text .title h1 {
+        max-width: 83%;
+        font-size: 1.7rem;
+    }
+    .content-text .title h3 {
+        font-size: 1.2rem;
+    }
+    .content-text .title p {
+        font-size: 1.2rem;
+    }
+    .text-button input {
+        width: 300px;
+    }
+}
+@media only screen and (orientation: landscape) {
+    .showcase{
+        height: 100vh;
+    }
+}
